@@ -15,7 +15,8 @@ services:
       --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2
       --name Thrift JDBC/ODBC Server
     volumes:
-      - ../dbt-radar/setup/:/dbt-radar/setup/
+      - ~/.ivy2/:/root/.ivy2/
+      - ./dbt-setup/:/dbt-setup/
       - ./.spark-warehouse/:/spark-warehouse/
       - ./docker/hive-site.xml:/usr/spark/conf/hive-site.xml
       - ./docker/spark-defaults.conf:/usr/spark/conf/spark-defaults.conf
